@@ -17,7 +17,7 @@ const app = express() //creates an express application instance
 // 2. the function that runs if the request comes
 app.get('/',function(request,response){
     console.log('Homepage Route')
-    response.sendFile(__dirname + '/homepage.html' )
+    response.sendFile(__dirname + '/views/homepage.html' )
 })
 
 console.log(__dirname)
