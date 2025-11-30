@@ -4,9 +4,14 @@ const colors = require('colors')
 const validator = require('validator')
 
 
+
+
 const express = require('express') // imports expres for us to use
 
 const app = express() //creates an express application instance
+
+
+app.use(express.static('public')) // serves all static files from public folder
 
 // if i get a request on /homepage
 // send back an h1 containing "Welcome to my Homepage"
@@ -26,6 +31,10 @@ app.get('/donate',(req,res)=>{
 
     res.send('<h1> Please donate </h1>')
 })
+
+
+
+// Routes go here:
 
 app.listen(3000,()=>{
     console.log('App is running on port 3000')
